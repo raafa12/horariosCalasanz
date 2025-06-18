@@ -80,19 +80,19 @@
         }
         
         .categories-legend {
-            background: #f8f9fa;
+            background: linear-gradient(135deg, #f1f3f4 0%, #e8eaf6 100%);
+            margin: 8px;
+            padding: 10px;
             border-radius: 8px;
-            padding: 12px 10px;
-            margin: 15px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            font-size: 0.9rem;
+            border: 1px solid #e0e0e0;
         }
         
         .categories-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-            gap: 8px 10px;
-            font-size: 0.85rem;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 4px 8px;
+            font-size: 0.7rem;
+            line-height: 1.2;
         }
         
         .category-item {
@@ -118,18 +118,16 @@
         }
         
         .section-title {
-            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
-            color: white;
-            padding: 6px 12px;
-            margin: 12px 0 5px 0;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            font-weight: 600;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            gap: 8px;
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            padding: 5px 8px;
+            border-radius: 6px;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
         
         .pabellon {
@@ -222,9 +220,6 @@
             background: #fff3e0;
             color: #e65100;
             border-left-color: #ff6d00;
-            border-left-width: 3px;
-            font-weight: 600;
-            padding: 4px 3px;
         }
         
         .empty-slot {
@@ -247,48 +242,18 @@
         }
         
         /* Responsive para pantallas muy pequeñas */
-        @media (max-width: 480px) {
+        @media (max-width: 360px) {
             body {
-                font-size: 11px;
-                padding: 6px;
+                font-size: 10px;
+                padding: 4px;
             }
             
             .header h1 {
-                font-size: 1.3rem;
+                font-size: 1.2rem;
             }
             
             .header h2 {
-                font-size: 0.85rem;
-                margin-top: 4px;
-            }
-            
-            .section-title {
-                font-size: 0.8rem;
-                padding: 5px 8px;
-                margin: 10px 0 5px 0;
-            }
-            
-            .categories-legend {
-                padding: 10px 8px;
-                margin: 12px 0;
-            }
-            
-            .categories-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 6px 8px;
-                font-size: 0.8rem;
-            }
-            
-            .training-slot {
-                font-size: 6.5px;
-                padding: 2px 1px;
-                margin: 0.5px 0;
-            }
-            
-            .time-slot {
-                font-size: 7px;
-                padding: 3px 1px;
-                min-width: 45px;
+                font-size: 0.75rem;
             }
             
             .schedule-table {
@@ -548,7 +513,11 @@
                             </div>
                         </td>
                         <td class="empty-slot">-</td>
-                        <td class="empty-slot">-</td>
+                        <td>
+                            <div class="training-slot training-fem">
+                                BEN FEM
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <td class="time-slot">16:00<br>17:00</td>
@@ -562,9 +531,6 @@
                             </div>
                             <div class="training-slot training-masc">
                                 BEN MASC A<br>BEN MASC B
-                            </div>
-                            <div class="training-slot training-fem">
-                                BEN FEM
                             </div>
                             <div class="training-slot training-masc">
                                 CAD MASC
@@ -584,6 +550,9 @@
                         <td>
                             <div class="training-slot training-fem">
                                 BEN FEM
+                            </div>
+                            <div class="training-slot training-fem">
+                                ALEV FEM
                             </div>
                         </td>
                         <td>
@@ -625,6 +594,9 @@
                         <td>
                             <div class="training-slot training-masc">
                                 ALEV MASC
+                            </div>
+                            <div class="training-slot training-fem">
+                                ALEV FEM
                             </div>
                         </td>
                     </tr>
