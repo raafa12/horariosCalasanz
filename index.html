@@ -89,9 +89,9 @@
         
         .categories-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6px 12px;
-            font-size: 0.75rem;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 4px 8px;
+            font-size: 0.7rem;
             line-height: 1.2;
         }
         
@@ -322,26 +322,17 @@
             <h2>Horarios Temporada 2025/2026</h2>
         </div>
         
-        <div class="legend">
-            <div class="legend-item">
-                <div class="legend-color pabellon-color"></div>
-                <span>🏢 Pabellón</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-color calle-color"></div>
-                <span>🌞 Pistas Ext.</span>
-            </div>
-        </div>
-        
         <!-- LEYENDA DE CATEGORÍAS -->
         <div class="categories-legend">
             <div class="categories-grid">
-                <div class="category-item"><strong>INF:</strong> Infantil</div>
+                <div class="category-item"><strong>BABY:</strong> Baby</div>
+                <div class="category-item"><strong>BEN:</strong> Benjamín</div>
+                <div class="category-item"><strong>ALEV:</strong> Alevín</div>
                 <div class="category-item"><strong>CAD:</strong> Cadete</div>
                 <div class="category-item"><strong>JUN:</strong> Junior</div>
-                <div class="category-item"><strong>BEN:</strong> Benjamín</div>
                 <div class="category-item"><strong>M:</strong> Masculino</div>
                 <div class="category-item"><strong>FEM:</strong> Femenino</div>
+                <div class="category-item"><strong>🏢:</strong> Pabellón</div>
             </div>
         </div>
         
@@ -364,60 +355,28 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="time-slot">16:30<br>18:00</td>
-                        <td>
-                            <div class="training-slot training-masc">
-                                INF<br>MASC A
-                            </div>
-                        </td>
-                        <td>
-                            <div class="training-slot training-masc">
-                                JUNIOR<br>MASC
-                            </div>
-                        </td>
-                        <td>
-                            <div class="training-slot training-masc">
-                                INF<br>MASC A
-                            </div>
-                        </td>
+                        <td class="time-slot">18:30<br>19:45</td>
                         <td class="empty-slot">-</td>
                         <td class="empty-slot">-</td>
+                        <td class="empty-slot">-</td>
+                        <td class="empty-slot">-</td>
+                        <td>
+                            <div class="training-slot training-fem">
+                                JUN FEM
+                            </div>
+                        </td>
                     </tr>
                     <tr>
-                        <td class="time-slot">18:00<br>19:30</td>
-                        <td>
-                            <div class="training-slot training-fem">
-                                CAD<br>FEM B
-                            </div>
-                        </td>
-                        <td>
-                            <div class="training-slot training-fem">
-                                CAD<br>FEM A
-                            </div>
-                        </td>
-                        <td>
-                            <div class="training-slot training-masc">
-                                JUNIOR<br>MASC
-                            </div>
-                        </td>
+                        <td class="time-slot">19:45<br>21:00</td>
                         <td class="empty-slot">-</td>
                         <td class="empty-slot">-</td>
-                    </tr>
-                    <tr>
-                        <td class="time-slot">19:30<br>21:00</td>
-                        <td>
-                            <div class="training-slot training-fem">
-                                JUNIOR<br>FEM
-                            </div>
-                        </td>
+                        <td class="empty-slot">-</td>
                         <td class="empty-slot">-</td>
                         <td>
                             <div class="training-slot training-fem">
-                                JUNIOR<br>FEM
+                                CAD FEM
                             </div>
                         </td>
-                        <td class="empty-slot">-</td>
-                        <td class="empty-slot">-</td>
                     </tr>
                 </tbody>
             </table>
@@ -442,6 +401,22 @@
                 </thead>
                 <tbody>
                     <tr>
+                        <td class="time-slot">15:00<br>16:15</td>
+                        <td>
+                            <div class="training-slot training-masc">
+                                BABY
+                            </div>
+                        </td>
+                        <td class="empty-slot">-</td>
+                        <td>
+                            <div class="training-slot training-masc">
+                                BABY
+                            </div>
+                        </td>
+                        <td class="empty-slot">-</td>
+                        <td class="empty-slot">-</td>
+                    </tr>
+                    <tr>
                         <td class="time-slot">16:00<br>17:00</td>
                         <td class="empty-slot">-</td>
                         <td class="empty-slot">-</td>
@@ -449,10 +424,13 @@
                         <td class="empty-slot">-</td>
                         <td>
                             <div class="training-slot training-masc">
-                                INF M<br>A & B
+                                BEN M A<br>BEN M B
+                            </div>
+                            <div class="training-slot training-fem">
+                                BEN FEM
                             </div>
                             <div class="training-slot training-masc">
-                                BEN<br>M A
+                                CAD M
                             </div>
                         </td>
                     </tr>
@@ -460,43 +438,51 @@
                         <td class="time-slot">16:30<br>18:00</td>
                         <td>
                             <div class="training-slot training-masc">
-                                INF<br>MASC B
+                                BEN M A<br>BEN M B
+                            </div>
+                        </td>
+                        <td>
+                            <div class="training-slot training-fem">
+                                BEN FEM
+                            </div>
+                        </td>
+                        <td>
+                            <div class="training-slot training-masc">
+                                BEN M A<br>BEN M B
+                            </div>
+                        </td>
+                        <td>
+                            <div class="training-slot training-fem">
+                                BEN FEM
+                            </div>
+                        </td>
+                        <td class="empty-slot">-</td>
+                    </tr>
+                    <tr>
+                        <td class="time-slot">17:15<br>18:30</td>
+                        <td class="empty-slot">-</td>
+                        <td class="empty-slot">-</td>
+                        <td class="empty-slot">-</td>
+                        <td class="empty-slot">-</td>
+                        <td>
+                            <div class="training-slot training-masc">
+                                ALEV M
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="time-slot">18:00<br>19:30</td>
+                        <td>
+                            <div class="training-slot training-masc">
+                                CAD M<br>ALEV M
                             </div>
                         </td>
                         <td class="empty-slot">-</td>
                         <td>
                             <div class="training-slot training-masc">
-                                INF<br>MASC B
+                                CAD M<br>ALEV M
                             </div>
                         </td>
-                        <td class="empty-slot">-</td>
-                        <td class="empty-slot">-</td>
-                    </tr>
-                    <tr>
-                        <td class="time-slot">16:45<br>18:15</td>
-                        <td class="empty-slot">-</td>
-                        <td class="empty-slot">-</td>
-                        <td>
-                            <div class="training-slot training-masc">
-                                BEN<br>MASC A
-                            </div>
-                        </td>
-                        <td class="empty-slot">-</td>
-                        <td class="empty-slot">-</td>
-                    </tr>
-                    <tr>
-                        <td class="time-slot">18:15<br>20:00</td>
-                        <td class="empty-slot">-</td>
-                        <td class="empty-slot">-</td>
-                        <td class="empty-slot">-</td>
-                        <td class="empty-slot">-</td>
-                        <td class="empty-slot">-</td>
-                    </tr>
-                    <tr>
-                        <td class="time-slot">20:00<br>21:30</td>
-                        <td class="empty-slot">-</td>
-                        <td class="empty-slot">-</td>
-                        <td class="empty-slot">-</td>
                         <td class="empty-slot">-</td>
                         <td class="empty-slot">-</td>
                     </tr>
