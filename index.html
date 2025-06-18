@@ -49,7 +49,7 @@
             width: 35px;
             border-radius: 50%;
             border: 2px solid white;
-            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
         }
         
         .header h2 {
@@ -77,6 +77,32 @@
             width: 12px;
             height: 12px;
             border-radius: 50%;
+        }
+        
+        .categories-legend {
+            background: linear-gradient(135deg, #f1f3f4 0%, #e8eaf6 100%);
+            margin: 8px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .categories-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px 12px;
+            font-size: 0.75rem;
+            line-height: 1.2;
+        }
+        
+        .category-item {
+            color: #37474f;
+            font-weight: 500;
+        }
+        
+        .category-item strong {
+            color: #1565c0;
+            font-weight: 700;
         }
         
         .pabellon-color {
@@ -248,35 +274,49 @@
             }
         }
         
-        /* Ajustes para captura de pantalla */
-        @media screen and (max-height: 700px) {
-            .header {
-                padding: 10px 8px;
+            /* Ajustes para captura de pantalla */
+            @media screen and (max-height: 700px) {
+                .header {
+                    padding: 8px 6px;
+                }
+                
+                .header h1 {
+                    font-size: 1.1rem;
+                }
+                
+                .header h2 {
+                    font-size: 0.75rem;
+                }
+                
+                .legend {
+                    padding: 8px 6px;
+                }
+                
+                .categories-legend {
+                    padding: 6px;
+                    margin: 6px;
+                }
+                
+                .categories-grid {
+                    font-size: 0.7rem;
+                    gap: 4px 10px;
+                }
+                
+                .section {
+                    margin: 4px;
+                }
+                
+                .schedule-table {
+                    margin-bottom: 8px;
+                }
             }
-            
-            .header h1 {
-                font-size: 1.2rem;
-            }
-            
-            .header h2 {
-                font-size: 0.8rem;
-            }
-            
-            .section {
-                margin: 6px;
-            }
-            
-            .schedule-table {
-                margin-bottom: 10px;
-            }
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>
-                <div class="header-logo">🏀</div>
+                <img src="logoCalasanz.png" alt="Logo Calasanz" class="header-logo">
                 CB CALASANZ
             </h1>
             <h2>Horarios Temporada 2025/2026</h2>
@@ -289,7 +329,19 @@
             </div>
             <div class="legend-item">
                 <div class="legend-color calle-color"></div>
-                <span>🌞 Ext.</span>
+                <span>🌞 Pistas Ext.</span>
+            </div>
+        </div>
+        
+        <!-- LEYENDA DE CATEGORÍAS -->
+        <div class="categories-legend">
+            <div class="categories-grid">
+                <div class="category-item"><strong>INF:</strong> Infantil</div>
+                <div class="category-item"><strong>CAD:</strong> Cadete</div>
+                <div class="category-item"><strong>JUN:</strong> Junior</div>
+                <div class="category-item"><strong>BEN:</strong> Benjamín</div>
+                <div class="category-item"><strong>M:</strong> Masculino</div>
+                <div class="category-item"><strong>FEM:</strong> Femenino</div>
             </div>
         </div>
         
@@ -375,7 +427,7 @@
         <div class="section">
             <div class="section-title calle">
                 <span class="icon">🌞</span>
-                EXTERIORES
+                PISTAS EXTERIORES
             </div>
             <table class="schedule-table">
                 <thead>
