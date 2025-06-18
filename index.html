@@ -3,74 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horarios de entrenamiento temporada 2025/2026</title>
+    <title>Horarios CB Calasanz 2025/2026</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 20px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
+            padding: 8px;
+            font-size: 11px;
         }
         
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
             background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
             overflow: hidden;
+            max-width: 100%;
         }
         
         .header {
             background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
             color: white;
             text-align: center;
-            padding: 30px 20px;
-            position: relative;
+            padding: 15px 10px;
         }
         
-        /* Se han eliminado los balones del fondo */
-        
         .header h1 {
-            margin: 0;
-            font-size: 2.5rem;
+            font-size: 1.4rem;
             font-weight: 800;
-            letter-spacing: 1px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            margin-bottom: 5px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 20px;
+            gap: 8px;
         }
         
         .header-logo {
-            height: 80px;
-            width: auto;
+            height: 35px;
+            width: 35px;
             border-radius: 50%;
-            border: 3px solid white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            border: 2px solid white;
+            background: white;
         }
         
         .header h2 {
-            margin: 10px 0 0 0;
-            font-size: 1.2rem;
+            font-size: 0.85rem;
             font-weight: 300;
             opacity: 0.9;
         }
         
+        .legend {
+            display: flex;
+            justify-content: space-around;
+            padding: 12px 8px;
+            background: #f8f9fa;
+            font-size: 0.8rem;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: bold;
+        }
+        
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .pabellon-color {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+        }
+        
+        .calle-color {
+            background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+        }
+        
         .section {
-            margin: 40px 20px;
+            margin: 8px;
         }
         
         .section-title {
             display: flex;
             align-items: center;
-            margin-bottom: 25px;
-            font-size: 1.8rem;
+            justify-content: center;
+            margin-bottom: 8px;
+            font-size: 1rem;
             font-weight: bold;
-            padding: 15px 20px;
-            border-radius: 10px;
+            padding: 8px;
+            border-radius: 8px;
             color: white;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
@@ -84,70 +113,66 @@
         }
         
         .section-title .icon {
-            font-size: 2rem;
-            margin-right: 15px;
+            font-size: 1rem;
+            margin-right: 8px;
         }
         
         .schedule-table {
             width: 100%;
             border-collapse: collapse;
             background: white;
-            border-radius: 10px;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+            font-size: 9px;
         }
         
         .schedule-table th {
             background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
             color: white;
-            padding: 15px 12px;
+            padding: 6px 2px;
             text-align: center;
             font-weight: bold;
-            font-size: 1.1rem;
+            font-size: 8px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
+            line-height: 1.1;
         }
         
         .schedule-table td {
-            padding: 15px 12px;
+            padding: 4px 2px;
             text-align: center;
             border-bottom: 1px solid #e0e0e0;
             vertical-align: top;
-            position: relative;
+            min-height: 35px;
         }
         
         .schedule-table tr:nth-child(even) {
             background-color: #f8f9fa;
         }
         
-        .schedule-table tr:hover {
-            background-color: #e3f2fd;
-            transform: scale(1.01);
-            transition: all 0.3s ease;
-        }
-        
         .time-slot {
             font-weight: bold;
             color: #2c3e50;
             background: linear-gradient(135deg, #ecf0f1 0%, #bdc3c7 100%);
-            border-radius: 8px;
-            padding: 8px;
-            font-size: 0.95rem;
+            border-radius: 4px;
+            padding: 4px 2px;
+            font-size: 8px;
+            line-height: 1.1;
+            min-width: 50px;
         }
         
         .training-slot {
-            border-radius: 4px;
-            padding: 10px 8px;
-            margin: 2px 0;
+            border-radius: 3px;
+            padding: 3px 2px;
+            margin: 1px 0;
             font-weight: 600;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            transition: all 0.2s ease;
-            border-left: 4px solid;
-        }
-        
-        .training-slot:hover {
-            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            font-size: 7px;
+            line-height: 1.1;
+            border-left: 2px solid;
+            word-break: break-word;
+            hyphens: auto;
         }
         
         /* EQUIPOS MASCULINOS */
@@ -157,10 +182,6 @@
             border-left-color: #1976d2;
         }
         
-        .training-masc:hover {
-            background: #bbdefb;
-        }
-        
         /* EQUIPOS FEMENINOS */
         .training-fem {
             background: #fce4ec;
@@ -168,63 +189,85 @@
             border-left-color: #e91e63;
         }
         
-        .training-fem:hover {
-            background: #f8bbd9;
-        }
-        
         .empty-slot {
             color: #bdc3c7;
             font-style: italic;
-            padding: 20px;
+            padding: 8px 4px;
+            font-size: 8px;
         }
         
-        .legend {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin: 30px 20px;
-            padding: 20px;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 10px;
-            flex-wrap: wrap;
+        /* Ajustes específicos para columnas */
+        .schedule-table th:first-child,
+        .schedule-table td:first-child {
+            width: 18%;
+            min-width: 45px;
         }
         
-        .legend-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: bold;
+        .schedule-table th:not(:first-child),
+        .schedule-table td:not(:first-child) {
+            width: 16.4%;
         }
         
-        .legend-color {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-        }
-        
-        .pabellon-color {
-            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
-        }
-        
-        .calle-color {
-            background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
-        }
-        
-        @media (max-width: 768px) {
+        /* Responsive para pantallas muy pequeñas */
+        @media (max-width: 360px) {
+            body {
+                font-size: 10px;
+                padding: 4px;
+            }
+            
             .header h1 {
-                font-size: 2rem;
+                font-size: 1.2rem;
             }
-            .section-title {
-                font-size: 1.5rem;
+            
+            .header h2 {
+                font-size: 0.75rem;
             }
-            .schedule-table th,
-            .schedule-table td {
+            
+            .schedule-table {
+                font-size: 8px;
+            }
+            
+            .schedule-table th {
+                font-size: 7px;
+                padding: 4px 1px;
+            }
+            
+            .training-slot {
+                font-size: 6px;
+                padding: 2px 1px;
+            }
+            
+            .time-slot {
+                font-size: 7px;
+                padding: 3px 1px;
+            }
+            
+            .empty-slot {
+                font-size: 7px;
+                padding: 6px 2px;
+            }
+        }
+        
+        /* Ajustes para captura de pantalla */
+        @media screen and (max-height: 700px) {
+            .header {
                 padding: 10px 8px;
-                font-size: 0.9rem;
             }
-            .legend {
-                flex-direction: column;
-                align-items: center;
+            
+            .header h1 {
+                font-size: 1.2rem;
+            }
+            
+            .header h2 {
+                font-size: 0.8rem;
+            }
+            
+            .section {
+                margin: 6px;
+            }
+            
+            .schedule-table {
+                margin-bottom: 10px;
             }
         }
     </style>
@@ -233,20 +276,20 @@
     <div class="container">
         <div class="header">
             <h1>
-                <img src="logoCalasanz.png" alt="Logo Calasanz" class="header-logo">
-                CLUB BALONCESTO CALASANZ
+                <div class="header-logo">🏀</div>
+                CB CALASANZ
             </h1>
-            <h2>Horarios de Entrenamientos - Temporada 2025/2026</h2>
+            <h2>Horarios Temporada 2025/2026</h2>
         </div>
         
         <div class="legend">
             <div class="legend-item">
                 <div class="legend-color pabellon-color"></div>
-                <span>🏢 Entrenamientos en Pabellón</span>
+                <span>🏢 Pabellón</span>
             </div>
             <div class="legend-item">
                 <div class="legend-color calle-color"></div>
-                <span>🌞 Entrenamientos en Pistas Exteriores</span>
+                <span>🌞 Ext.</span>
             </div>
         </div>
         
@@ -254,77 +297,76 @@
         <div class="section">
             <div class="section-title pabellon">
                 <span class="icon">🏢</span>
-                ENTRENAMIENTOS EN PABELLÓN
+                PABELLÓN
             </div>
             <table class="schedule-table">
                 <thead>
                     <tr>
-                        <th>HORARIO</th>
-                        <th>LUNES</th>
-                        <th>MARTES</th>
-                        <th>MIÉRCOLES</th>
-                        <th>JUEVES</th>
-                        <th>VIERNES</th>
+                        <th>HORA</th>
+                        <th>LUN</th>
+                        <th>MAR</th>
+                        <th>MIÉ</th>
+                        <th>JUE</th>
+                        <th>VIE</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="time-slot">16:30 - 18:00</td>
+                        <td class="time-slot">16:30<br>18:00</td>
                         <td>
                             <div class="training-slot training-masc">
-                                INFANTIL MASC A
+                                INF<br>MASC A
                             </div>
                         </td>
                         <td>
                             <div class="training-slot training-masc">
-                                JUNIOR MASC
+                                JUNIOR<br>MASC
                             </div>
                         </td>
                         <td>
                             <div class="training-slot training-masc">
-                                INFANTIL MASC A
+                                INF<br>MASC A
                             </div>
                         </td>
                         <td class="empty-slot">-</td>
                         <td class="empty-slot">-</td>
                     </tr>
                     <tr>
-                        <td class="time-slot">18:00 - 19:30</td>
+                        <td class="time-slot">18:00<br>19:30</td>
                         <td>
                             <div class="training-slot training-fem">
-                                CADETE FEM B
+                                CAD<br>FEM B
                             </div>
                         </td>
                         <td>
                             <div class="training-slot training-fem">
-                                CADETE FEM A
+                                CAD<br>FEM A
                             </div>
                         </td>
                         <td>
                             <div class="training-slot training-masc">
-                                JUNIOR MASC
+                                JUNIOR<br>MASC
                             </div>
                         </td>
                         <td class="empty-slot">-</td>
                         <td class="empty-slot">-</td>
                     </tr>
                     <tr>
-                        <td class="time-slot">19:30 - 21:00</td>
+                        <td class="time-slot">19:30<br>21:00</td>
                         <td>
                             <div class="training-slot training-fem">
-                                JUNIOR FEM
+                                JUNIOR<br>FEM
                             </div>
                         </td>
                         <td class="empty-slot">-</td>
                         <td>
                             <div class="training-slot training-fem">
-                                JUNIOR FEM
+                                JUNIOR<br>FEM
                             </div>
                         </td>
                         <td class="empty-slot">-</td>
                         <td class="empty-slot">-</td>
                     </tr>
-
                 </tbody>
             </table>
         </div>
@@ -333,66 +375,65 @@
         <div class="section">
             <div class="section-title calle">
                 <span class="icon">🌞</span>
-                ENTRENAMIENTOS EN PISTAS EXTERIORES
+                EXTERIORES
             </div>
             <table class="schedule-table">
                 <thead>
                     <tr>
-                        <th>HORARIO</th>
-                        <th>LUNES</th>
-                        <th>MARTES</th>
-                        <th>MIÉRCOLES</th>
-                        <th>JUEVES</th>
-                        <th>VIERNES</th>
+                        <th>HORA</th>
+                        <th>LUN</th>
+                        <th>MAR</th>
+                        <th>MIÉ</th>
+                        <th>JUE</th>
+                        <th>VIE</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="time-slot">16:00 - 17:00</td>
+                        <td class="time-slot">16:00<br>17:00</td>
                         <td class="empty-slot">-</td>
                         <td class="empty-slot">-</td>
                         <td class="empty-slot">-</td>
                         <td class="empty-slot">-</td>
                         <td>
                             <div class="training-slot training-masc">
-                                INFANTIL MASC A & B
+                                INF M<br>A & B
                             </div>
-                            <div class="training-slot training-masc" style="margin-top: 5px;">
-                                BENJAMIN MASC A
+                            <div class="training-slot training-masc">
+                                BEN<br>M A
                             </div>
                         </td>
                     </tr>
                     <tr>
-                        <td class="time-slot">16:30 - 18:00</td>
+                        <td class="time-slot">16:30<br>18:00</td>
                         <td>
                             <div class="training-slot training-masc">
-                                INFANTIL MASC B
+                                INF<br>MASC B
                             </div>
                         </td>
-                        <td class="empty-slot">-</td>
-                        <td>
-                            <div class="training-slot training-masc">
-                                INFANTIL MASC B
-                            </div>
-                        </td>
-                        <td class="empty-slot">-</td>
-                        <td class="empty-slot">-</td>
-                        <td class="empty-slot">-</td>
-                    </tr>
-                    <tr>
-                        <td class="time-slot">16:45 - 18:15</td>
-                        <td class="empty-slot">-</td>
                         <td class="empty-slot">-</td>
                         <td>
                             <div class="training-slot training-masc">
-                                BENJAMIN MASC A
+                                INF<br>MASC B
                             </div>
                         </td>
                         <td class="empty-slot">-</td>
                         <td class="empty-slot">-</td>
                     </tr>
                     <tr>
-                        <td class="time-slot">18:15 - 20:00</td>
+                        <td class="time-slot">16:45<br>18:15</td>
+                        <td class="empty-slot">-</td>
+                        <td class="empty-slot">-</td>
+                        <td>
+                            <div class="training-slot training-masc">
+                                BEN<br>MASC A
+                            </div>
+                        </td>
+                        <td class="empty-slot">-</td>
+                        <td class="empty-slot">-</td>
+                    </tr>
+                    <tr>
+                        <td class="time-slot">18:15<br>20:00</td>
                         <td class="empty-slot">-</td>
                         <td class="empty-slot">-</td>
                         <td class="empty-slot">-</td>
@@ -400,7 +441,7 @@
                         <td class="empty-slot">-</td>
                     </tr>
                     <tr>
-                        <td class="time-slot">20:00 - 21:30</td>
+                        <td class="time-slot">20:00<br>21:30</td>
                         <td class="empty-slot">-</td>
                         <td class="empty-slot">-</td>
                         <td class="empty-slot">-</td>
