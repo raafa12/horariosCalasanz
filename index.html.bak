@@ -15,12 +15,12 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            padding: 8px 4px;
+            padding: 15px 8px;
             margin: 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            font-size: 10px;
+            font-size: 11px;
         }
         
         .container {
@@ -37,7 +37,7 @@
             background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
             color: white;
             text-align: center;
-            padding: 8px 6px;
+            padding: 15px 10px;
         }
         
         .header h1 {
@@ -87,8 +87,8 @@
         
         .categories-legend {
             background: linear-gradient(135deg, #f1f3f4 0%, #e8eaf6 100%);
-            margin: 4px;
-            padding: 6px;
+            margin: 8px;
+            padding: 10px;
             border-radius: 8px;
             border: 1px solid #e0e0e0;
         }
@@ -128,7 +128,7 @@
         }
         
         .section {
-            margin: 4px;
+            margin: 8px;
         }
         
         .section-title {
@@ -164,8 +164,8 @@
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            margin-bottom: 8px;
-            font-size: 8px;
+            margin-bottom: 15px;
+            font-size: 9px;
         }
         
         .schedule-table th {
@@ -181,12 +181,11 @@
         }
         
         .schedule-table td {
-            padding: 2px 1px;
+            padding: 4px 2px;
             text-align: center;
             border-bottom: 1px solid #e0e0e0;
-            vertical-align: middle;
-            min-height: 25px;
-            height: 25px;
+            vertical-align: top;
+            min-height: 35px;
         }
         
         .schedule-table tr:nth-child(even) {
@@ -206,21 +205,17 @@
         
         .training-slot {
             border-radius: 3px;
-            padding: 2px 1px;
-            margin: 0;
+            padding: 3px 2px;
+            margin: 1px 0;
             font-weight: 600;
             font-size: 7px;
-            line-height: 1.2;
+            line-height: 1.1;
             border-left: 2px solid;
             word-break: break-word;
             hyphens: auto;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            min-height: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
         
         /* EQUIPOS MASCULINOS */
@@ -407,7 +402,7 @@
                         </td>
                         <td>
                             <div class="training-slot training-masc">
-                                JUN MASC
+                                JUNIOR<br>MASC
                             </div>
                         </td>
                         <td>
@@ -417,7 +412,7 @@
                         </td>
                         <td>
                             <div class="training-slot training-fem">
-                                INF FEM
+                                INF<br>FEM
                             </div>
                         </td>
                         <td class="empty-slot">-</td>
@@ -430,7 +425,7 @@
                         <td class="empty-slot">-</td>
                         <td>
                             <div class="training-slot training-masc">
-                                JUN MASC
+                                JUNIOR<br>MASC
                             </div>
                         </td>
                     </tr>
@@ -438,22 +433,22 @@
                         <td class="time-slot">18:00<br>19:30</td>
                         <td>
                             <div class="training-slot training-fem">
-                                CAD FEM B
+                                CAD<br>FEM B
                             </div>
                         </td>
                         <td>
                             <div class="training-slot training-fem">
-                                CAD FEM A
+                                CAD<br>FEM A
                             </div>
                         </td>
                         <td>
                             <div class="training-slot training-masc">
-                                JUN MASC
+                                JUNIOR<br>MASC
                             </div>
                         </td>
                         <td>
                             <div class="training-slot training-fem">
-                                CAD FEM
+                                CAD<br>FEM
                             </div>
                         </td>
                         <td class="empty-slot">-</td>
@@ -465,7 +460,7 @@
                         <td class="empty-slot">-</td>
                         <td>
                             <div class="training-slot training-fem">
-                                CAD FEM B
+                                CAD<br>FEM B
                             </div>
                         </td>
                         <td class="empty-slot">-</td>
@@ -478,7 +473,7 @@
                         <td class="empty-slot">-</td>
                         <td>
                             <div class="training-slot training-fem">
-                                JUN FEM
+                                JUN<br>FEM
                             </div>
                         </td>
                     </tr>
@@ -486,17 +481,17 @@
                         <td class="time-slot">19:30<br>21:00</td>
                         <td>
                             <div class="training-slot training-fem">
-                                JUN FEM
+                                JUNIOR<br>FEM
                             </div>
                         </td>
                         <td>
                             <div class="training-slot training-fem">
-                                INF FEM
+                                INF<br>FEM
                             </div>
                         </td>
                         <td>
                             <div class="training-slot training-fem">
-                                JUN FEM
+                                JUNIOR<br>FEM
                             </div>
                         </td>
                         <td class="empty-slot">-</td>
@@ -510,7 +505,7 @@
                         <td class="empty-slot">-</td>
                         <td>
                             <div class="training-slot training-fem">
-                                CAD FEM
+                                CAD<br>FEM
                             </div>
                         </td>
                         <td class="empty-slot">-</td>
@@ -565,7 +560,13 @@
                         <td class="empty-slot">-</td>
                         <td>
                             <div class="training-slot training-masc">
-                                INF A/BEN/CAD MASC
+                                INF MASC A
+                            </div>
+                            <div class="training-slot training-masc">
+                                BEN MASC
+                            </div>
+                            <div class="training-slot training-masc">
+                                CAD MASC
                             </div>
                         </td>
                     </tr>
@@ -573,22 +574,34 @@
                         <td class="time-slot">16:30<br>18:00</td>
                         <td>
                             <div class="training-slot training-masc">
-                                BEN/INF B MASC
+                                BEN MASC
+                            </div>
+                            <div class="training-slot training-masc">
+                                INF<br>MASC B
                             </div>
                         </td>
                         <td>
                             <div class="training-slot training-fem">
-                                BEN/ALEV FEM
+                                BEN FEM
+                            </div>
+                            <div class="training-slot training-fem">
+                                ALEV FEM
                             </div>
                         </td>
                         <td>
                             <div class="training-slot training-masc">
-                                BEN A/B/INF B MASC
+                                BEN M A<br>BEN M B
+                            </div>
+                            <div class="training-slot training-masc">
+                                INF<br>MASC B
                             </div>
                         </td>
                         <td>
                             <div class="training-slot training-fem">
-                                BEN/ALEV FEM
+                                BEN FEM
+                            </div>
+                            <div class="training-slot training-fem">
+                                ALEV<br>FEM
                             </div>
                         </td>
                         <td class="empty-slot">-</td>
@@ -599,7 +612,7 @@
                         <td class="empty-slot">-</td>
                         <td>
                             <div class="training-slot training-masc">
-                                BEN A MASC
+                                BEN<br>MASC A
                             </div>
                         </td>
                         <td class="empty-slot">-</td>
@@ -613,7 +626,7 @@
                         <td class="empty-slot">-</td>
                         <td>
                             <div class="training-slot training-masc">
-                                INF B MASC
+                                INF MASC B
                             </div>
                         </td>
                     </tr>
@@ -625,7 +638,10 @@
                         <td class="empty-slot">-</td>
                         <td>
                             <div class="training-slot training-masc">
-                                ALEV M/F
+                                ALEV MASC
+                            </div>
+                            <div class="training-slot training-fem">
+                                ALEV FEM
                             </div>
                         </td>
                     </tr>
@@ -633,13 +649,13 @@
                         <td class="time-slot">18:00<br>19:30</td>
                         <td>
                             <div class="training-slot training-masc">
-                                CAD/ALEV MASC
+                                CAD M<br>ALEV MASC
                             </div>
                         </td>
                         <td class="empty-slot">-</td>
                         <td>
                             <div class="training-slot training-masc">
-                                CAD/ALEV MASC
+                                CAD MASC<br>ALEV MASC
                             </div>
                         </td>
                         <td class="empty-slot">-</td>
@@ -663,7 +679,7 @@
                         <td class="empty-slot">-</td>
                         <td>
                             <div class="training-slot training-fem">
-                                CAD FEM
+                                CAD<br>FEM
                             </div>
                         </td>
                         <td class="empty-slot">-</td>
