@@ -257,6 +257,51 @@
             border-left-color: #e91e63;
         }
         
+        /* TARJETA COMBINADA INF FEM Y ALEV MASC */
+        .training-combined {
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+            overflow: hidden;
+            height: 28px;
+            position: relative;
+        }
+        
+        .training-combined .half-slot {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            font-size: 7px;
+            font-weight: 600;
+        }
+        
+        .training-combined .half-slot.left {
+            background: #fce4ec;
+            color: #c2185b;
+            border-right: 1px solid #e0e0e0;
+        }
+        
+        .training-combined .half-slot.right {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+        
+        .training-combined .team-name {
+            font-size: 7px;
+            font-weight: 700;
+            line-height: 1.1;
+            text-align: center;
+        }
+        
+        .training-combined .training-time {
+            font-size: 6px;
+            opacity: 0.9;
+            line-height: 1;
+        }
+        
         /* EQUIPO BABY */
         .training-baby {
             background: #fff3e0;
@@ -555,19 +600,19 @@
                             </td>
                             <td>
                                 <div class="training-slot training-fem">
-                                    <div class="training-team">BEN FEM</div>
+                                    <div class="training-team">BEN/INF FEM</div>
                                     <div class="training-time">16:30-18:00</div>
                                 </div>
                             </td>
                             <td>
                                 <div class="training-slot training-masc">
-                                    <div class="training-team">BEN MASC</div>
-                                    <div class="training-time">16:45-18:15</div>
+                                    <div class="training-team">BEN/INF B MASC</div>
+                                    <div class="training-time">16:30-18:00</div>
                                 </div>
                             </td>
                             <td>
                                 <div class="training-slot training-fem">
-                                    <div class="training-team">BEN FEM</div>
+                                    <div class="training-team">BEN/INF FEM</div>
                                     <div class="training-time">16:30-18:00</div>
                                 </div>
                             </td>
@@ -604,13 +649,15 @@
                                 </div>
                             </td>
                             <td>
-                                <div class="training-slot training-fem">
-                                    <div class="training-team">ALEV FEM A/B</div>
-                                    <div class="training-time">17:00-18:00</div>
-                                </div>
-                                <div class="training-slot training-masc">
-                                    <div class="training-team">ALEV MASC</div>
-                                    <div class="training-time">18:00-19:00</div>
+                                <div class="training-combined">
+                                    <div class="half-slot left">
+                                        <div class="team-name">INF FEM</div>
+                                        <div class="training-time">18:00-19:00</div>
+                                    </div>
+                                    <div class="half-slot right">
+                                        <div class="team-name">ALEV MASC</div>
+                                        <div class="training-time">18:00-19:00</div>
+                                    </div>
                                 </div>
                             </td>
                         </tr>
